@@ -3,7 +3,8 @@ body{
     height: 100%;
     padding: 0px;
     margin: 0px;
-    background: url(../images/backgrounds.jpg);
+    background: #2e3643;
+    background-image: url(../images/backgrounds.jpg);
     color: #fff;
     font-family: 'Lato', sans-serif;
     background-size: cover;
@@ -144,7 +145,8 @@ input[type="text"]{
 .logo h1{
     color:#db8438;
     font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
+    font-size: 44px;
+    line-height: 66px;
     font-weight: 900;
     margin: 0 30px -6px 30px;
     background: #2d3848;
@@ -237,7 +239,7 @@ input[type="text"]{
 }
 
 .project-info-content {
-        font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     width: 500px;
 	position: relative;
 	margin: 10% auto;
@@ -345,7 +347,7 @@ a.close-window:hover {
     border-bottom: 0px;
 }
     
-@media (max-width:992px){
+@media (max-width:1200px){
     #search-form{
         height: 100px;
     }
@@ -353,6 +355,6 @@ a.close-window:hover {
         margin-top: 20px;
     }
     #search{
-        top:24px;
+        top:19px;
     }
 }
