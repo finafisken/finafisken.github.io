@@ -1,4 +1,0 @@
-finafisken.github.io
-====================
-
-gitpages
