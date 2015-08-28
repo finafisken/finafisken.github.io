@@ -3,6 +3,8 @@
 }
 body{
     color: #fff;
+    margin:0px;
+    font-family: 'Source Sans Pro', sans-serif;
     background: linear-gradient(219deg, #16a085, #27ae60, #2980b9, #2c3e50, #8e44ad, #c0392b, #d35400, #f39c12);
     background-size: 1600% 1600%;
     -webkit-animation: bgGrad 52s linear infinite;
@@ -25,7 +27,7 @@ body{
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@keyframes bgGrad { 
+@keyframes bgGrad {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -35,39 +37,73 @@ body{
     background: rgba(0,0,0,0.3);
     width: 50%;
     height: 100%;
+}
+#toggle-anim{
+    background: rgba(0,0,0,0);
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    border:0px;
+    padding:0px;
+    outline:none;
+    cursor:pointer;
+    transition: background 0.3s ease;
+}
+#toggle-anim:hover{
+    background: rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+}
+
+#toggle-anim:hover > img{
 
 }
-h1{
+.logo-bg img{
+    width:100%;
+    height: 100%;
+}
+h1, .name-wrap{
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
     margin:0px;
     color: rgba(255,255,255,0.7);
     font-weight: 400;
     text-transform: uppercase;
-    border-bottom: 1px dashed rgba(255,255,255,0.5);
 }
-h1 span{
+.name-wrap{
+    overflow: hidden;
+    height: 43px;
+}
+.name-wrap span{
     font-weight: 700;
     color: rgba(255,255,255,1);
-   
+    display:block;
+    transition: transform 0.5s ease;
 }
-b{
-    text-transform: uppercase;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: rgba(255,255,255,0.5);
+.secret-name{
+    transform: translateY(0%);
 }
-p{
-    font-family: 'Source Sans Pro', sans-serif;
+.name-wrap:hover .regular-name{
+    transform: translateY(-100%);
+}
+.name-wrap:hover .secret-name{
+    transform: translateY(-100%);
 }
 .info{
-    overflow: visible;
-    padding: 10px 20px;
+    padding: 0px;
     float: left;
     background: rgba(0,0,0,0.5);
     height: 100%;
     width:50%;
     position:relative;
 
+}
+.text-wrap{
+    position:absolute;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 30px;
 }
 .content-wrap{
     overflow: auto;
@@ -92,14 +128,21 @@ a, a:visited{
 a:hover{
     color: rgba(255,255,255,1);
 }
-    
+a.tw, a.gh, a.li, a.tw:hover, a.gh:hover, a.li:hover{
+    transition: color 0.3s ease;
+}
+a.tw:hover{
+    color:#55acee;
+}
+a.gh:hover{
+    color:#913399;
+}
+a.li:hover{
+    color:#0077b5;
+}
 .social {
-    text-align: center;
-    background: rgba(0,0,0,0.3);
-    margin: 0 -20px;
-    padding: 10px 20px;
-    position: absolute;
-    bottom: 0px;
+    text-align: right;
+    padding-top:10px;
     width: 100%;
 }
 .social p{
@@ -113,18 +156,10 @@ a:hover{
 .social p:before{
     content: '';
     display: inline-block;
-    width: 20%;
-    height: 2px;
+    width: 60%;
+    height: 1px;
     background: rgba(255,255,255,0.3);
     margin:0 5px 4px 0;
-}
-.social p:after{
-    content: '';
-    display: inline-block;
-    width: 20%;
-    height: 2px;
-    background: rgba(255,255,255,0.3);
-    margin:0 0 4px 5px;
 }
 .half {
     position: absolute;
@@ -132,12 +167,45 @@ a:hover{
     top: 0px;
     width: 50%;
     height: 100%;
-    background: #222 url(https://unsplash.imgix.net/38/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg?q=75&fm=jpg&s=51073abaa031b2397f4f9bd55c15f716);
-    background-size: cover;
+    background: rgba(0,0,0,0.7);
 }
 
-@media(max-width: 720px){
-    .social p:before, .social p:after{
+@media(max-width: 1000px){
+    .content-wrap{
+        overflow: auto;
+        width:100%;
+        height: auto;
+        max-width: none;
+        min-height: 0px;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+      	-webkit-transform: translateY(-50%);
+      	-ms-transform: translateY(-50%);
+      	transform: translateY(-50%);
+    }
+    .half{
+        right: 0px;
+        top: auto;
+        bottom:0px;
+        left:0px;
+        width: 100%;
+        height: 50%;
+        background: rgba(0,0,0,0.7);
+    }
+    .logo-bg, .info{
+        float:none;
+        width:90%;
+        height:45%;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    .social p:before{
+        width: 48%;
+    }
+}
+@media(max-width: 400px){
+    .social p:before{
         width: 0px;
         height: 0px;
     }

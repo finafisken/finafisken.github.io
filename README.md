@@ -1,4 +1,6 @@
 finafisken.github.io
 ====================
 
-Personal webpage http://finafisken.github.io
+Personal website of Markus Warne (finafisken)
+
+ http://finafisken.github.io
