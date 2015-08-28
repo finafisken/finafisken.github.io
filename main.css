@@ -5,24 +5,13 @@ body{
     color: #fff;
     margin:0px;
     font-family: 'Source Sans Pro', sans-serif;
+    background: -webkit-linear-gradient(219deg, #16a085, #27ae60, #2980b9, #2c3e50, #8e44ad, #c0392b, #d35400, #f39c12);
     background: linear-gradient(219deg, #16a085, #27ae60, #2980b9, #2c3e50, #8e44ad, #c0392b, #d35400, #f39c12);
     background-size: 1600% 1600%;
     -webkit-animation: bgGrad 52s linear infinite;
-    -moz-animation: bgGrad 52s linear infinite;
-    -o-animation: bgGrad 52s linear infinite;
     animation: bgGrad 52s linear infinite;
 }
 @-webkit-keyframes bgGrad {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes bgGrad {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-o-keyframes bgGrad {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -47,11 +36,13 @@ body{
     padding:0px;
     outline:none;
     cursor:pointer;
-    transition: background 0.3s ease;
+    -webkit-transition: background 0.3s ease;
+            transition: background 0.3s ease;
 }
 #toggle-anim:hover{
     background: rgba(0,0,0,0.3);
-    transition: background 0.3s ease;
+    -webkit-transition: background 0.3s ease;
+            transition: background 0.3s ease;
 }
 
 #toggle-anim:hover > img{
@@ -77,16 +68,23 @@ h1, .name-wrap{
     font-weight: 700;
     color: rgba(255,255,255,1);
     display:block;
-    transition: transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+            transition: transform 0.5s ease;
 }
 .secret-name{
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%) translate3d( 0, 0, 0);
+        -ms-transform: translateY(0%) translate3d( 0, 0, 0);
+            transform: translateY(0%) translate3d( 0, 0, 0);
 }
 .name-wrap:hover .regular-name{
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%) translate3d( 0, 0, 0);
+        -ms-transform: translateY(-100%) translate3d( 0, 0, 0);
+            transform: translateY(-100%) translate3d( 0, 0, 0);
 }
 .name-wrap:hover .secret-name{
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%) translate3d( 0, 0, 0);
+        -ms-transform: translateY(-100%) translate3d( 0, 0, 0);
+            transform: translateY(-100%) translate3d( 0, 0, 0);
 }
 .info{
     padding: 0px;
@@ -110,7 +108,7 @@ h1, .name-wrap{
     width:100%;
     height: 50%;
     max-width: 1000px;
-    min-height: 430px;
+    min-height: 450px;
     margin: 0 auto;
     position: relative;
     top: 50%;
@@ -129,7 +127,8 @@ a:hover{
     color: rgba(255,255,255,1);
 }
 a.tw, a.gh, a.li, a.tw:hover, a.gh:hover, a.li:hover{
-    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+            transition: color 0.3s ease;
 }
 a.tw:hover{
     color:#55acee;
