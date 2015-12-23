@@ -1,7 +1,9 @@
 *{
     box-sizing: border-box;
 }
-body{
+html, body{
+    height: 100%;
+    width:100%;
     color: #fff;
     margin:0px;
     font-family: 'Source Sans Pro', sans-serif;
