@@ -8,19 +8,19 @@
 	#o1 {
 	  stroke-dasharray: 432;
 	  stroke-dashoffset: 432;
-	  -webkit-animation: draw 4s 1 linear forwards, hide 0.5s 1 6s linear forwards;
-	          animation: draw 4s 1 linear forwards, hide 0.5s 1 6s linear forwards;
+	  -webkit-animation: draw 3s 1 linear forwards, hide 0.5s 1 4s linear forwards;
+	          animation: draw 3s 1 linear forwards, hide 0.5s 1 4s linear forwards;
 	}
 	#o2 {
 	  stroke-dasharray: 693;
 	  stroke-dashoffset: 693;
-	  -webkit-animation: draw 4s 1 linear forwards, hide 0.5s 1 6s linear forwards;
-	          animation: draw 4s 1 linear forwards, hide 0.5s 1 6s linear forwards;
+	  -webkit-animation: draw 3s 1 linear forwards, hide 0.5s 1 4s linear forwards;
+	          animation: draw 3s 1 linear forwards, hide 0.5s 1 4s linear forwards;
 	}
 	#mw_shadow{
 	    opacity:0;
-	    -webkit-animation: reveal 2s 1 4s linear forwards;
-	            animation: reveal 2s 1 4s linear forwards;
+	    -webkit-animation: reveal 1s 1 3s linear forwards;
+	            animation: reveal 1s 1 3s linear forwards;
 	}
 	@-webkit-keyframes draw {
 	  to {
